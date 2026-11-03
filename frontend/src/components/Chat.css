@@ -1,0 +1,132 @@
+.chat-container {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1000;
+}
+
+.chat-botao {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  background-color: #806451;
+  color: white;
+  font-size: 26px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.chat-botao:hover {
+  background-color: #5f493a;
+}
+
+.chat-janela {
+  width: 350px;
+  height: 480px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chat-cabecalho {
+  background-color: #806451;
+  color: white;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-cabecalho h3 {
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.chat-cabecalho span {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.chat-cabecalho button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.chat-mensagens {
+  flex: 1;
+  min-height: 0;
+  padding: 18px;
+  background-color: #faf8f5;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.mensagem {
+  max-width: 85%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.mensagem-ia {
+  background-color: #eee5dc;
+  color: #40352f;
+  align-self: flex-start;
+}
+
+.chat-entrada {
+  display: flex;
+  padding: 12px;
+  gap: 8px;
+  border-top: 1px solid #eee;
+}
+
+.chat-entrada input {
+  flex: 1;
+  min-width: 0;
+  padding: 11px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+  font-size: 12px;
+}
+
+.chat-entrada button {
+  padding: 0 14px;
+  border: none;
+  border-radius: 20px;
+  background-color: #806451;
+  color: white;
+  font-size: 12px;
+}
+
+.chat-entrada button:disabled,
+.chat-entrada input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 420px) {
+  .chat-container {
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .chat-janela {
+    width: calc(100vw - 30px);
+    height: 70vh;
+  }
+}

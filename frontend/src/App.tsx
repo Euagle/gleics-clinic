@@ -1,5 +1,6 @@
 
 import './App.css'
+import Chat from './components/Chat'
 
 function App() {
   return (
@@ -45,6 +46,8 @@ function App() {
           e ao bem-estar.
         </p>
       </section>
+
+      <Chat />
     </main>
   )
 }

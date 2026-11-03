@@ -1,8 +1,11 @@
-
 import express from "express";
+import cors from "cors";
 import chatRoutes from "./routes/chat.routes.js";
 
 const app = express();
+
+// Permite a comunicação com o front-end
+app.use(cors({ origin: "http://localhost:5173" }));
 
 // Permite que o servidor interprete dados em JSON
 app.use(express.json());
